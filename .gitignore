@@ -1,0 +1,12 @@
+DATA/
+ABOUT_THE_DATA/
+selva_paranaense/
+ARG.zip
+.ruff_cache/
+__pycache__
+__pycache__/
+__pycache__/*
+*.tif
+raw_data/
+src/raw_data/
+informe_region_forestal_selva_paranaense_primera_version.rar

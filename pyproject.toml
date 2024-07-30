@@ -1,0 +1,105 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "misiones_carbon_analysis"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Torr1co", email = "fabriziotorrico27@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "ipython",
+  "jupyter",
+  "ruff",
+  "pandas",
+  "numpy",
+  "matplotlib",
+  "seaborn",
+  "geopandas",
+  "rasterio",
+  "xarray",
+  "zarr"
+]
+
+[project.urls]
+Documentation = "https://github.com/Torr1co/misiones_carbon_analysis#readme"
+Issues = "https://github.com/Torr1co/misiones_carbon_analysis/issues"
+Source = "https://github.com/Torr1co/misiones_carbon_analysis"
+
+[tool.hatch.version]
+path = "src/misiones_carbon_analysis/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/misiones_carbon_analysis tests}"
+
+[tool.coverage.run]
+source_pkgs = ["misiones_carbon_analysis", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/misiones_carbon_analysis/__about__.py",
+]
+
+[tool.coverage.paths]
+misiones_carbon_analysis = ["src/misiones_carbon_analysis", "*/misiones_carbon_analysis/src/misiones_carbon_analysis"]
+tests = ["tests", "*/misiones_carbon_analysis/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.ruff]
+# Set the maximum line length to 80.
+line-length = 80
+extend-include =  ["*.ipynb"]
+exclude = ["N803"]
+
+[tool.ruff.lint]
+# Add the `line-too-long` rule to the enforced rule set. By default, Ruff omits rules that
+# overlap with the use of a formatter, like Black, but we can override this behavior by
+# explicitly adding the rule.
+extend-select = [
+    "F",  # Errores generales de Flake8
+    "E",  # Errores de estilo de código de Flake8
+    "W",  # Advertencias de estilo de código de Flake8
+    "C",  # Convenciones de PEP 8
+    "N",  # Convenciones de nombres
+    "Q",  # Códigos de calificación
+    "S",  # Seguridad
+    "I",  # Importaciones
+    "A",  # Mejoras de código (Autoflake)
+    "T",  # Tipos (mypy)
+    "D",  # Docstrings
+    "UP", # Errores de uso de paquetes
+]
+exclude = ["N803"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.flake8-type-checking]
+strict = true
