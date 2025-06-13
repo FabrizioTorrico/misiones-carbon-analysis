@@ -25,6 +25,7 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
+  "ipykernel",
   "ipython",
   "jupyter",
   "ruff",
@@ -35,7 +36,8 @@ dependencies = [
   "geopandas",
   "rasterio",
   "xarray",
-  "zarr"
+  "zarr",
+  "scikit-learn"
 ]
 
 [project.urls]
