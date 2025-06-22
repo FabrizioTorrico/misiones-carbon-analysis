@@ -1,0 +1,27 @@
+title,Pérdida de cobertura arbórea en Iguazú, Misiones, Argentina
+threshold,30
+extent_year,2000
+start_year,2001
+end_year,2023
+url,https_tiles_globalforestwatch_org_umd_tree_cover_loss_v_1_11_tcd_thresh_z_x_y_png
+thresh,30
+start_date,2001_01_01
+end_date,2023_12_31
+min_date,2001_01_01
+max_date,2023_12_31
+trim_end_date,2023_12_31
+can_play,true
+confirmed_only,0
+glad_l_only,0
+glad_s_only,0
+radd_only,0
+start_month,0
+start_day,1
+end_month,11
+end_day,365
+start_day_index,0
+end_day_index,8399
+number_of_days,8399
+date_downloaded,2024-09-04
+metadata,https://api.resourcewatch.org/v1/gfw-metadata/widget_tree_cover_loss
+link,https://www.globalforestwatch.org/map/country/ARG/14/9/?mainMap=eyJzaG93QW5hbHlzaXMiOnRydWV9&map=eyJjZW50ZXIiOnsibGF0IjotMjUuODY5NTUxMDg3MDM5ODM0LCJsbmciOi01NC40MTUwMTIzNTk2MDcwN30sInpvb20iOjguOTM0NjgwNzkyNDIwMjAzLCJjYW5Cb3VuZCI6ZmFsc2V9&menu=eyJkYXRhc2V0Q2F0ZWdvcnkiOiJmb3Jlc3RDaGFuZ2UiLCJtZW51U2VjdGlvbiI6ImRhdGFzZXRzIn0%3D
